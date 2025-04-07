@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Documents() {
+function DocumentsPage() {
   return (
     <div>Documents</div>
   )
 }
 
-export default Documents
+export default DocumentsPage

@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavItems } from '../../lib/reuse/NavItems'
+import { Link } from 'react-router'
 
 function MobileNav({toggleMenus}) {
   return (
@@ -13,9 +14,11 @@ function MobileNav({toggleMenus}) {
         
       </div>
       <div className='space-y-4 mt-5'>
-        {NavItems.map(({link,label},i) =>(
-          <a href={link} key={i} className='block text-lg text-tertiary hover:text-primary transition-colors duration-150'>{label}</a>
-        ))}
+       {NavItems.map(({label,path},i) =>
+          <Link to={path} key={i}>
+            <p className='block text-lg text-tertiary hover:text-primary transition-colors duration-150'>{label}</p>
+          </Link>
+      )}
       </div>
     </div>
   )

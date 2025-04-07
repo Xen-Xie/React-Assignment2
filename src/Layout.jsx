@@ -1,17 +1,30 @@
-// Layout.jsx
 import React from 'react';
-import NavBar from './Components/NavBar';
+import { Outlet, useLocation } from 'react-router-dom';
+import NavBar from './components/NavBar';
 import DashBord from './Components/DashBord';
-import { Outlet } from 'react-router-dom';
 
-const Layout = () => {
+
+function Layout() {
+  const location = useLocation();
+
+  const routeName = {
+    '/': 'Dashboard',
+    '/incidents': 'Incidents',
+    '/locations': 'Locations',
+    '/activities': 'Activities',
+    '/documents': 'Documents',
+    '/cypher-ai': 'Cypher AI'
+  }[location.pathname] || 'Dashboard';
+
   return (
-    <div>
+    <>
       <NavBar />
-      <DashBord />
-      <Outlet /> {/* 👈 this renders nested route components */}
-    </div>
+      <DashBord title={routeName} />
+      <main className="mx-3 sm:mx-10 md:mx-5 lg:mx-30 my-4">
+        <Outlet />
+      </main>
+    </>
   );
-};
+}
 
 export default Layout;

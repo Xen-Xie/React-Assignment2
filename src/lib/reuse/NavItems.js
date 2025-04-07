@@ -2,32 +2,25 @@ export const NavItems = [
     {
         label: 'Dashboard',
         path: '/',
-        link: '#'
     },
     {
         label: 'Incidents',
-        path: '/',
-        link: '#'
+        path: '/incidents',
     },
     {
         label: 'Locations',
-        path: '/',
-        link: '#'
+        path: '/locations',
     },
     {
         label: 'Activities',
-        path: '/',
-        link: '#'
+        path: '/activities',
     },
     {
         label: 'Documents',
-        path: '/',
-        link: '#'
+        path: '/documents',
     },
     {
         label: 'Cypher AI',
-        path: '/',
-        link: '#'
+        path: '/cypher',
     }
-
 ];

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CypherAI() {
+function Cypher() {
   return (
     <div>CypherAI</div>
   )
 }
 
-export default CypherAI
+export default Cypher
