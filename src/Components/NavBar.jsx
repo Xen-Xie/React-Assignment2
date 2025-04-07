@@ -3,6 +3,7 @@ import { NavItems } from '../lib/reuse/NavItems'
 import ProfileBar from './CommonComponents/Profile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MobileNav from './CommonComponents/MobileNav'
+import DashBord from './DashBord'
 
 function NavBar() {
     const [isMenusOpen, setIsMenusOpen] = useState(false);
@@ -22,7 +23,7 @@ function NavBar() {
                 <div className='hidden lg:flex justify-center items-center gap-3 xl:gap-4'>
                     {NavItems.map(({label,link}, i) =>
                         <a href={link}>
-                    <p className='text-secondary xl:text-base text-sm hover:text-primary transition-colors duration-150 cursor-pointer'>{label}</p>
+                    <p className='text-tertiary xl:text-base text-sm hover:text-primary transition-colors duration-150 cursor-pointer'>{label}</p>
                 </a>
                     )}
                 </div>
@@ -33,6 +34,7 @@ function NavBar() {
             </div>
         </nav>
        {isMenusOpen && <MobileNav toggleMenus={toggleMenus} />}
+       <DashBord />
     </>
   )
 }

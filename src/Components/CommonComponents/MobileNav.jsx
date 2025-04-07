@@ -14,7 +14,7 @@ function MobileNav({toggleMenus}) {
       </div>
       <div className='space-y-4 mt-5'>
         {NavItems.map(({link,label},i) =>(
-          <a href={link} key={i} className='block text-lg text-secondary hover:text-primary transition-colors duration-150'>{label}</a>
+          <a href={link} key={i} className='block text-lg text-tertiary hover:text-primary transition-colors duration-150'>{label}</a>
         ))}
       </div>
     </div>
