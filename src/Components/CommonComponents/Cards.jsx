@@ -3,8 +3,8 @@ import { CardItems } from '../../lib/reuse/CardItems';
 
 function Cards() {
   return (
-    <div className='px-3 py-3 mt-5 cursor-pointer'>
-      <div className='grid grid-cols-1 sm:grid-cols-4 space-x-4 space-y-5 mx-5 my-5'>
+    <div className='mx-3 sm:mx-10 md:mx-5 my-2 lg:mx-30 mt-5 cursor-pointer'>
+      <div className='grid grid-cols-1 md:grid-cols-4 gap-5 mx-5 my-5'>
         {CardItems.map(({ image, insideImage, title, subtitle, price,insideText }, i) => (
           <div key={i} className='hover:scale-105 transition-all duration-150'>
             <div className='relative w-full max-w-md'>
