@@ -1,8 +1,11 @@
 import React from 'react'
+import Cards from '../CommonComponents/Cards'
 
 function Incidents() {
   return (
-    <div>Incidents</div>
+    <div className='CardBoard'>
+      <Cards />
+    </div>
   )
 }
 

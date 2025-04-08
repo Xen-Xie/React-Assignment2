@@ -1,10 +1,10 @@
 import React from 'react'
-import Cards from '../CommonComponents/Cards'
+import DashboardCards from '../CommonComponents/DashboardCards'
 
 function DashboardPage() {
   return (
     <div className='bg-[#FFFFFF] h-screen '>
-      <Cards />
+      <DashboardCards />
     </div>
   )
 }
