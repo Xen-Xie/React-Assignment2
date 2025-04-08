@@ -54,3 +54,11 @@ export const CardItems = [
 
     },
 ];
+
+let x ;
+
+x=10
+
+const data = x+y
+
+console.log(data)
