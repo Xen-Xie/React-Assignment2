@@ -5,15 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MobileNav from './CommonComponents/MobileNav'
 import DashBord from './DashBord'
 import { Link, useLocation } from 'react-router-dom'
+import { cn } from '../lib/utlities'
 
-function NavBar() {
+function NavBar({className}) {
     const [isMenusOpen, setIsMenusOpen] = useState(false); //Open or Close the menu
     const location = useLocation();
     const toggleMenus = () => setIsMenusOpen(!isMenusOpen); //Toggle Function
     
     return (
-        <>
-            <nav className='mx-3 sm:mx-10 md:mx-5 my-2 lg:mx-30'>
+        <div className='bg-[#E4E4E7] py-3'>
+            <nav className={cn('mx-3 sm:mx-10 md:mx-5 my-2 lg:mx-30',className)}>
                 <div className='flex items-center justify-between gap-3.5 sm:gap-0'>
                     {/*Toggle Menu Button and Logo Area*/}
                     <div className='flex items-center gap-3'>
@@ -54,7 +55,7 @@ function NavBar() {
             </nav>
            {isMenusOpen && <MobileNav toggleMenus={toggleMenus} />} {/*Pass the value to the mobile version*/}
            <DashBord className={'mt-10'}/> {/*Dashbord area*/}
-        </>
+        </div>
     )
 }
 

@@ -12,7 +12,7 @@ import { Routes, Route } from 'react-router-dom' // No BrowserRouter here
 function App() {
   return (
     <>
-      <NavBar/>
+      <NavBar />
       <Routes> {/* Routes can work without BrowserRouter wrapper because it's in main.jsx */}
         <Route path="/" element={<DashboardPage />} />
         <Route path="/incidents" element={<IncidentsPage />} />

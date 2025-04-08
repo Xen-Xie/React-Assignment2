@@ -1,8 +1,11 @@
 import React from 'react'
+import Cards from '../CommonComponents/Cards'
 
 function DashboardPage() {
   return (
-    <div>DashboardPage</div>
+    <div className='bg-foreground h-screen '>
+      <Cards />
+    </div>
   )
 }
 
