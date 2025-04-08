@@ -1,4 +1,5 @@
 import React from 'react'
+import ChatBox from '../CommonComponents/ChatBox'
 
 function Activities() {
   return (

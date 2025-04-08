@@ -3,7 +3,7 @@ import Cards from '../CommonComponents/Cards'
 
 function DashboardPage() {
   return (
-    <div className='bg-foreground h-screen '>
+    <div className='bg-[#FFFFFF] h-screen '>
       <Cards />
     </div>
   )
