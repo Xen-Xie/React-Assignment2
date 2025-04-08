@@ -53,7 +53,7 @@ function NavBar() {
                 </div>
             </nav>
            {isMenusOpen && <MobileNav toggleMenus={toggleMenus} />} {/*Pass the value to the mobile version*/}
-           <DashBord /> {/*Dashbord area*/}
+           <DashBord className={'mt-10'}/> {/*Dashbord area*/}
         </>
     )
 }
