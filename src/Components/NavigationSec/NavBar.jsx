@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { NavItems } from '../lib/reuse/NavItems'
-import ProfileBar from './CommonComponents/Profile'
+import { NavItems } from '../../lib/reuse/NavItems'
+import ProfileBar from './Profile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import MobileNav from './CommonComponents/MobileNav'
-import DashBord from './DashBord'
+import MobileNav from './MobileNav'
+import DashBord from '../DashBord'
 import { Link, useLocation } from 'react-router-dom'
-import { cn } from '../lib/utlities'
+import { cn } from '../../lib/utlities'
 
 function NavBar({className}) {
     const [isMenusOpen, setIsMenusOpen] = useState(false); //Open or Close the menu

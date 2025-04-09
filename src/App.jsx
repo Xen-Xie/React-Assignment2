@@ -1,6 +1,6 @@
 // src/App.js
 import './App.css'
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavigationSec/NavBar'
 import DashboardPage from './Components/Pages/DashboardPage'
 import IncidentsPage from './Components/Pages/IncidentsPage'
 import LocationsPage from './Components/Pages/LocationsPage'
