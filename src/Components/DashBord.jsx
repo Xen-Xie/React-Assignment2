@@ -1,5 +1,6 @@
+// src/Components/DashBord.jsx
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import DashbordText from './CommonComponents/DashbordText';
 import SearchBar from './CommonComponents/SearchBar';
 import SortFilter from './CommonComponents/SortFilter';
@@ -11,8 +12,8 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 function DashBord({ className }) {
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // Define the texts based on the current route
   const routeTexts = {
     '/': {
       upperText: 'Welcome back',
@@ -46,11 +47,15 @@ function DashBord({ className }) {
     },
   };
 
-  const {
-    upperText,
-    dashbordText,
-    buttonText = 'Cypher AI',
-  } = routeTexts[location.pathname] || routeTexts['/'];
+  const { upperText, dashbordText, buttonText = 'Cypher AI' } = routeTexts[location.pathname] || routeTexts['/'];
+
+  const handleButtonClick = () => {
+    if (location.pathname === '/incidents') {
+      navigate('/incidents/new');
+    } else {
+      navigate('/cypher');
+    }
+  };
 
   return (
     <div className={cn('flex flex-col sm:flex-row items-center justify-between mx-3 sm:mx-10 md:mx-5 lg:mx-30 gap-4')}>
@@ -61,13 +66,10 @@ function DashBord({ className }) {
       <div className={cn('flex flex-col sm:flex-row gap-2 sm:gap-5', className)}>
         <SearchBar />
         <SortFilter />
-        <Button className="mx-17 sm:mx-0 flex items-center gap-2">
-  {location.pathname === '/incidents' && <FontAwesomeIcon icon={faPlus} />}
-  {location.pathname === '/locations' && <FontAwesomeIcon icon={faPlus} />}
-  {buttonText}
-</Button>
-
-
+        <Button className="mx-17 sm:mx-0 flex items-center gap-2" onClick={handleButtonClick}>
+          {location.pathname === '/incidents' && <FontAwesomeIcon icon={faPlus} />}
+          {buttonText}
+        </Button>
       </div>
     </div>
   );
