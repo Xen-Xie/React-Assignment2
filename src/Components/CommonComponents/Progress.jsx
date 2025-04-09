@@ -3,7 +3,7 @@ import Button from './Button';
 
 function Progress({ progress = 25 }) {
   return (
-    <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#E4E4E7] px-4 py-5 gap-4 sm:gap-6">
+    <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between bg-[#E4E4E7] px-4 xl:px-30 py-5 gap-4 sm:gap-6">
       
       {/* Left: Texts */}
       <div className="flex flex-col min-w-[150px]">
