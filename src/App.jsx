@@ -10,6 +10,7 @@ import Cypher from './Components/Pages/Cypher';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import NewIncident from './Components/Pages/NewIncident';
 import DeepIncident from './Components/Pages/DeepIncident';
+import SecondStep from './Components/Pages/SecondStep';
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
         <Route path="/incidents" element={<IncidentsPage />} />
         <Route path="/incidents/new" element={<NewIncident />} />
         <Route path="/incidents/new/new-step" element={<DeepIncident />} />
+        <Route path="/incidents/new/new-step/second-step" element={<SecondStep />} />
         <Route path="/locations" element={<LocationsPage />} />
         <Route path="/activities" element={<ActivitiesPage />} />
         <Route path="/documents" element={<DocumentsPage />} />

@@ -1,8 +1,9 @@
 import React from 'react';
+import { cn } from '../../lib/utlities';
 
-function SecondComp() {
+function SecondComp({className}) {
   return (
-    <div className="flex flex-col gap-6">
+    <div className={cn("flex flex-col gap-6",className)}>
       {/* Title Input */}
       <div className="flex flex-col gap-1">
         <h1 className="text-accent font-bold text-xl">Let’s give the incident a title?</h1>
