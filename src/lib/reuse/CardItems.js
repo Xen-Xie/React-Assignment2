@@ -1,6 +1,6 @@
 export const CardItems = [
     {
-        image: 'Img1.svg',
+        image: '/Img1.svg',
         insideImage: 'Cloud.svg',
         insideText: 'Blizzard',
         title:'Whitechapel Rd.',
@@ -9,7 +9,7 @@ export const CardItems = [
 
     },
     {
-        image: 'Img2.svg',
+        image: '/Img2.svg',
         insideImage: 'Cloud.svg',
         insideText: 'Blizzard',
         title:'Whitechapel Rd.',
@@ -18,7 +18,7 @@ export const CardItems = [
 
     },
     {
-        image: 'Img3.svg',
+        image: '/Img3.svg',
         insideImage: 'Cloud.svg',
         insideText: 'Blizzard',
         title:'Tulare County',
@@ -27,7 +27,7 @@ export const CardItems = [
 
     },
     {
-        image: 'Img4.svg',
+        image: '/Img4.svg',
         insideImage: 'Cloud.svg',
         insideText: 'Blizzard',
         title:'Tulare County',
@@ -36,7 +36,7 @@ export const CardItems = [
 
     },
     {
-        image: 'Img5.svg',
+        image: '/Img5.svg',
         insideImage: 'Cloud.svg',
         insideText: 'Blizzard',
         title:'Tulare County',
@@ -45,7 +45,7 @@ export const CardItems = [
 
     },
     {
-        image: 'Img6.svg',
+        image: '/Img6.svg',
         insideImage: 'Cloud.svg',
         insideText: 'Blizzard',
         title:'Tulare County',

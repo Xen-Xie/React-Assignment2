@@ -16,7 +16,7 @@ const ProfileBar = ({ hasNotification }) => {
 
       {/* Avatar */}
       <img
-        src="avatar.svg"
+        src="/avatar.svg"
         alt="User avatar"
         className="rounded-full shrink-0"
       />
