@@ -2,6 +2,7 @@ import React from 'react'
 import ProgressBar from '../CommonComponents/ProgressBar'
 import IncidentCards from '../CommonComponents/IncidentCards'
 import Button from '../CommonComponents/Button'
+import InsideInc from '../CommonComponents/InsideInc'
 
 function NewIncident() {
   return (
