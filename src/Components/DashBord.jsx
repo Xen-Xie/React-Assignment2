@@ -1,4 +1,3 @@
-// src/Components/DashBord.jsx
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import DashbordText from './CommonComponents/DashbordText';
@@ -47,11 +46,14 @@ function DashBord({ className }) {
     },
   };
 
-  const { upperText, dashbordText, buttonText = 'Cypher AI' } = routeTexts[location.pathname] || routeTexts['/'];
+  const { upperText, dashbordText, buttonText = 'Cypher AI' } =
+    routeTexts[location.pathname] || routeTexts['/'];
 
   const handleButtonClick = () => {
     if (location.pathname === '/incidents') {
       navigate('/incidents/new');
+    } else if (location.pathname === '/locations') {
+      navigate('/locations/new');
     } else {
       navigate('/cypher');
     }
@@ -61,13 +63,24 @@ function DashBord({ className }) {
     <div className={cn('flex flex-col sm:flex-row items-center justify-between mx-3 sm:mx-10 md:mx-5 lg:mx-30 gap-4')}>
       <div className="flex-1 mt-0 sm:mt-5">
         <UpperText>{upperText}</UpperText>
-        <DashbordText>{dashbordText}</DashbordText>
+
+        {location.pathname === '/locations' ? (
+          <div className="flex items-center gap-2">
+            <img src="/frog.svg" alt="DR-4699" className="w-6 h-6 object-contain" />
+            <DashbordText>DR-4699 March 2023 Severe Storms</DashbordText>
+          </div>
+        ) : (
+          <DashbordText>{dashbordText}</DashbordText>
+        )}
       </div>
+
       <div className={cn('flex flex-col sm:flex-row gap-2 sm:gap-5', className)}>
         <SearchBar />
         <SortFilter />
         <Button className="mx-17 sm:mx-0 flex items-center gap-2" onClick={handleButtonClick}>
-          {location.pathname === '/incidents' && <FontAwesomeIcon icon={faPlus} />}
+          {(location.pathname === '/incidents' || location.pathname === '/locations') && (
+            <FontAwesomeIcon icon={faPlus} />
+          )}
           {buttonText}
         </Button>
       </div>
