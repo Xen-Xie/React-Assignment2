@@ -42,7 +42,7 @@ function FakeMap({className}) {
               <input
                 type="text"
                 placeholder={search.placeholder}
-                className="w-70 pl-10 pr-4 py-2 rounded-md border border-gray-300 bg-white bg-opacity-90 text-sm placeholder-secondary focus:outline-none"
+                className="w-30 h-8 sm:w-40 md:w-65 lg:w-68 xl:w-70 sm:h-auto pl-10 pr-4 py-2 rounded-md border border-[#E4E4E7] bg-white bg-opacity-90 text-sm placeholder-secondary focus:outline-secondary"
               />
             </div>
           ))}

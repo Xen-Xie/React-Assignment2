@@ -15,7 +15,7 @@ function Progress({ progress = 25 }) {
       navigate('/incidents/new');
     } else if (currentPath === '/incidents/new/new-step/second-step') {
       navigate('/incidents/new/new-step');
-    } else if (currentPath === '/incidents/new/new-step/second-step/final') {
+    } else if (currentPath === '/incidents/new/new-step/second-step/last-step') {
       navigate('/incidents/new/new-step/second-step');
     }
   };
@@ -26,9 +26,17 @@ function Progress({ progress = 25 }) {
     } else if (currentPath === '/incidents/new/new-step') {
       navigate('/incidents/new/new-step/second-step');
     } else if (currentPath === '/incidents/new/new-step/second-step') {
-      navigate('/incidents/new/new-step/second-step/final');
+      navigate('/incidents/new/new-step/second-step/last-step');
     }
   };
+
+  const handleFinalNext = () => {
+    // Example action: navigate to the IncidentsPage or show a confirmation
+    navigate('/incidents');
+  };
+
+  const isFinalStep =
+    currentPath === '/incidents/new/new-step/second-step/last-step';
 
   const shouldShowNext =
     currentPath === '/incidents/new' ||
@@ -73,6 +81,15 @@ function Progress({ progress = 25 }) {
             className="text-xs px-3 py-1 sm:px-4 sm:py-2"
           >
             Next
+          </Button>
+        )}
+
+        {isFinalStep && (
+          <Button
+            onClick={handleFinalNext}
+            className="text-xs px-3 py-1 sm:px-4 sm:py-2"
+          >
+            Finish
           </Button>
         )}
       </div>
