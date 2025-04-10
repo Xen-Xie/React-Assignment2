@@ -2,6 +2,7 @@ import React from 'react'
 import LocationTexts from '../CommonComponents/LocationTexts'
 import LocationDes from '../CommonComponents/LocationDes'
 import LocationCard from '../CommonComponents/LocationCard'
+import Activities from '../CommonComponents/Activities'
 
 function Locations() {
   return (
@@ -17,6 +18,7 @@ function Locations() {
         <LocationCard />
         <div className='w-full h-0.5 bg-[#E4E4E7]'>
         </div>
+        <Activities />
 
         </div>
         
