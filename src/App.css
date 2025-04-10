@@ -14,3 +14,20 @@
 .CardBoard {
     @apply mx-2 sm:mx-10 md:mx-5 my-2 lg:mx-30 mt-5 cursor-pointer;
 }
+/*Design fot the animated Gradient text */
+@layer utilities {
+    @keyframes gradient-x {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+  
+    .animate-gradient-x {
+      background-size: 200% 200%;
+      animation: gradient-x 5s ease infinite;
+    }
+  }
+  

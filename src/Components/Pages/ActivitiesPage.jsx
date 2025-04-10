@@ -1,9 +1,11 @@
 import React from 'react'
-import ChatBox from '../CommonComponents/ChatBox'
+import GradientText from '../CommonComponents/GradientText'
 
 function Activities() {
   return (
-    <div>Activities</div>
+    <div>
+      <GradientText>Activities Items Will be in here soon..</GradientText>
+    </div>
   )
 }
 
