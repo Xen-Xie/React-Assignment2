@@ -12,6 +12,7 @@ import NewIncident from './Components/Pages/NewIncident';
 import DeepIncident from './Components/Pages/DeepIncident';
 import SecondStep from './Components/Pages/SecondStep';
 import LastStep from './Components/Pages/LastStep';
+import NotFound from './Components/Pages/NotFound';
 
 function App() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/activities" element={<ActivitiesPage />} />
         <Route path="/documents" element={<DocumentsPage />} />
         <Route path="/cypher" element={<Cypher />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
