@@ -3,6 +3,7 @@ import LocationTexts from '../CommonComponents/LocationTexts'
 import LocationDes from '../CommonComponents/LocationDes'
 import LocationCard from '../CommonComponents/LocationCard'
 import Activities from '../CommonComponents/Activities'
+import Documents from '../CommonComponents/Documents'
 
 function Locations() {
   return (
@@ -19,6 +20,9 @@ function Locations() {
         <div className='w-full h-0.5 bg-[#E4E4E7]'>
         </div>
         <Activities />
+        <div className='w-full h-0.5 bg-[#E4E4E7]'>
+        </div>
+        <Documents />
 
         </div>
         
