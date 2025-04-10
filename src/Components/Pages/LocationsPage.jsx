@@ -7,7 +7,7 @@ import Documents from '../CommonComponents/Documents'
 
 function Locations() {
   return (
-    <div className='mx-4 mt-8'>
+    <div className='mx-3 sm:mx-10 md:mx-5 my-2 lg:mx-30 mt-8'>
       <div className='grid grid-cols-2 gap-5'>
         <div className='space-y-3'>
           <LocationTexts />
